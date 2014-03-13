@@ -7,7 +7,7 @@ var lats = [];
 var lons = [];
 </script>
 <section id="map"></section>
-<section id="content">
+<section id="content" class="scroll-styled quite-scroll">
 	<div class="content-container">
 		<nav class="navbar navbar-default" role="navigation">
         	<!-- Brand and toggle get grouped for better mobile display -->
@@ -65,7 +65,11 @@ var lons = [];
 		<!-- <div id="close-content"></div> -->
 	</div>
 </section>
-<section id="add"></section>
+<div id="add-button"></div>
+<section id="add">
+	<div id="close-add">X</div>
+	<?php echo do_shortcode('[gravityform id=1]'); ?>
+</section>
 
 <div class="clearfix"></div>
 

@@ -26,6 +26,16 @@ function init() {
 	    .addTo(map);
 	map.fitBounds(featureLayer.getBounds());
 
+	// add button
+	$('#add-button').click(function(){
+		$('#add').toggleClass('do-it');
+		$(this).toggleClass('do-it');
+	});
+	$('#close-add').click(function(){
+		$('#add').toggleClass('do-it');
+		$('#add-button').toggleClass('do-it');
+	});
+
 }
 
 window.onLoad = init();
