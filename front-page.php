@@ -47,8 +47,7 @@ geoJson['type'] = 'FeatureCollection';
 geoJson['features'] = [];
 groups = [];
 
-len = group.length;
-for (i=0; i<len; i++) {
+for (i=0; i<group.length; i++) {
 	var newFeature = {
 		"type": "Feature",
 		"geometry": {
