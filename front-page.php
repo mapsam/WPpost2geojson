@@ -7,7 +7,7 @@ var lats = [];
 var lons = [];
 </script>
 hehoooooo
-<section class="container">
+<section class="content">
 	<?php
 	$args = array( 
 		'post_type'			=> 'point',
@@ -18,8 +18,8 @@ hehoooooo
 	if ( $query->have_posts() ) :
 		while ( $query->have_posts() ) : $query->the_post();
 			$name = the_title('', '', false);
-			$lat = get_field( "latitude" );
-			$lon = get_field( "longitude" ); ?>
+			$lat = get_post_meta($post->ID, "coordinates_lat", true );
+			$lon = get_post_meta($post->ID, "coordinates_lon", true ); ?>
 			<script>
 			var name = <?php echo json_encode($name); ?>;
 			var lat = <?php echo json_encode($lat); ?>;
@@ -36,31 +36,6 @@ hehoooooo
 </section>
 
 <section id="map"></section>
-
-<script>
-var length = group.length;
-for(mug=0; mug<length; mug++) {
-	console.log(group[mug], lats[mug], lons[mug]);
-}
-var geoJson = {};
-geoJson['type'] = 'FeatureCollection';
-geoJson['features'] = [];
-groups = [];
-
-for (i=0; i<group.length; i++) {
-	var newFeature = {
-		"type": "Feature",
-		"geometry": {
-			"type": "Point",
-			"coordinates": [lons[i], lats[i]]
-		},
-		"properties": {
-			"group_name": group[i]
-		}
-	}
-	geoJson['features'].push(newFeature);	
-}
-console.log(geoJson);
-</script>
+<div class="clearfix"></div>
 
 <?php get_footer();

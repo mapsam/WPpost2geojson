@@ -1,5 +1,5 @@
 /*
-Theme Name: WP Bootstrap Starter
+Theme Name: P2G
 Description: Wordpress & Bootstrap starter kit
 Author: Sam Matthews
 Author URI: http://situatedlaboratories.com
@@ -14,6 +14,19 @@ body {
 	padding:0;
 	margin:0;
 }
-.container {
-	margin-top:50px;
+.content {
+	position:absolute;
+	left:0;
+	top:80px;
+	bottom:0;
+	width:50%;
+}
+#map {
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	width:50%;
+	height:100%;
+	background-color:#c0c0c0;
 }

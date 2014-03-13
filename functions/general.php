@@ -13,7 +13,6 @@ function wpbootstrap_queue() {
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css' );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js' );
 	wp_enqueue_style( 'site-css',  get_stylesheet_uri() );
-	wp_enqueue_script( 'site-css',  get_template_directory_uri() . '/js/main.js', array('bootstrap-js') );
 }
 
 // use the WP action to hook these into our page build
