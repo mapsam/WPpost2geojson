@@ -62,8 +62,8 @@ var lons = [];
 			<?php endwhile;
 			wp_reset_postdata(); ?>
 		<?php endif; ?>
+		<!-- <div id="close-content"></div> -->
 	</div>
-	<div id="close-content"></div>
 </section>
 <section id="add"></section>
 

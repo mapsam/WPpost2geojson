@@ -25,6 +25,7 @@ function init() {
     var featureLayer = L.mapbox.featureLayer(geoJson)
 	    .addTo(map);
 	map.fitBounds(featureLayer.getBounds());
+
 }
 
 window.onLoad = init();
